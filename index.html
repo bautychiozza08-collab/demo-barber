@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOIR Barber Club</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="bg-glow"></div>
+
+<header class="navbar">
+  <div class="logo">NOIR<span>BARBER</span></div>
+
+  <nav>
+    <a onclick="showPage('inicio')">Inicio</a>
+    <a onclick="showPage('servicios')">Servicios</a>
+    <a onclick="showPage('staff')">Staff</a>
+    <a onclick="showPage('opiniones')">Opiniones</a>
+    <a onclick="showPage('turnos')">Turnos</a>
+  </nav>
+
+  <button onclick="showPage('turnos')">Reservar</button>
+</header>
+
+<main>
+
+  <section class="page hero" id="inicio">
+    <div>
+      <p class="tag">Premium Barber Experience</p>
+      <h1>Más que un corte.<br><span>Una experiencia.</span></h1>
+      <p class="hero-text">
+        Barbería premium con reservas online, servicios destacados,
+        staff profesional y atención personalizada.
+      </p>
+
+      <div class="badges">
+        <span>💈 Cortes premium</span>
+        <span>🧔 Barba</span>
+        <span>⚡ Turnos online</span>
+        <span>⭐ 4.9 rating</span>
+      </div>
+
+      <div class="hero-buttons">
+        <button onclick="showPage('turnos')">Reservar turno</button>
+        <button class="ghost" onclick="showPage('servicios')">Ver servicios</button>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <p>Servicio destacado</p>
+      <h2>Fade Premium</h2>
+      <h3>$8.500</h3>
+      <span>45 min · Incluye terminación con navaja</span>
+      <button onclick="selectService('Fade Premium')">Reservar este corte</button>
+    </div>
+  </section>
+
+  <section class="page hidden" id="servicios">
+    <div class="section-title">
+      <p class="tag">Servicios</p>
+      <h2>Cortes destacados</h2>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="icon">💈</div>
+        <h3>Fade Premium</h3>
+        <p>Degradado limpio, terminación precisa y estilo profesional.</p>
+        <strong>$8.500</strong>
+        <button onclick="selectService('Fade Premium')">Reservar</button>
+      </div>
+
+      <div class="card">
+        <div class="icon">🧔</div>
+        <h3>Corte + Barba</h3>
+        <p>Combo completo con perfilado, navaja y acabado premium.</p>
+        <strong>$12.000</strong>
+        <button onclick="selectService('Corte + Barba')">Reservar</button>
+      </div>
+
+      <div class="card">
+        <div class="icon">⚡</div>
+        <h3>Burst Fade</h3>
+        <p>Estilo moderno, ideal para looks urbanos y marcados.</p>
+        <strong>$9.000</strong>
+        <button onclick="selectService('Burst Fade')">Reservar</button>
+      </div>
+
+      <div class="card">
+        <div class="icon">🔥</div>
+        <h3>Mullet</h3>
+        <p>Un clásico renovado con técnica actual y estilo fuerte.</p>
+        <strong>$9.500</strong>
+        <button onclick="selectService('Mullet')">Reservar</button>
+      </div>
+
+      <div class="card">
+        <div class="icon">✂️</div>
+        <h3>Corte clásico</h3>
+        <p>Elegante, prolijo y perfecto para todos los días.</p>
+        <strong>$7.500</strong>
+        <button onclick="selectService('Corte clásico')">Reservar</button>
+      </div>
+
+      <div class="card">
+        <div class="icon">👑</div>
+        <h3>Diseño freestyle</h3>
+        <p>Líneas, diseños personalizados y detalles únicos.</p>
+        <strong>$10.000</strong>
+        <button onclick="selectService('Diseño freestyle')">Reservar</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="page hidden" id="staff">
+    <div class="section-title">
+      <p class="tag">Nuestro equipo</p>
+      <h2>Barberos expertos</h2>
+    </div>
+
+    <div class="staff-grid">
+      <div class="staff-card">
+        <div class="avatar">L</div>
+        <h3>Lucas</h3>
+        <p>Senior Barber · Fade Specialist</p>
+        <span>+5 años de experiencia</span>
+      </div>
+
+      <div class="staff-card">
+        <div class="avatar">M</div>
+        <h3>Mauro</h3>
+        <p>Barba · Clásicos · Navaja</p>
+        <span>Estilo elegante y prolijo</span>
+      </div>
+
+      <div class="staff-card">
+        <div class="avatar">T</div>
+        <h3>Thiago</h3>
+        <p>Diseños · Mullet · Urban style</p>
+        <span>Cortes modernos y creativos</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="page hidden" id="opiniones">
+    <div class="section-title">
+      <p class="tag">Clientes</p>
+      <h2>Opiniones reales</h2>
+    </div>
+
+    <div class="reviews">
+      <div class="review">
+        <h3>⭐ 5.0</h3>
+        <p>“El mejor fade que me hicieron. La atención es de otro nivel.”</p>
+        <span>— Cliente frecuente</span>
+      </div>
+
+      <div class="review">
+        <h3>⭐ 4.9</h3>
+        <p>“Reservé por la web y en segundos ya tenía mi turno.”</p>
+        <span>— Nuevo cliente</span>
+      </div>
+
+      <div class="review">
+        <h3>⭐ 5.0</h3>
+        <p>“El local, la música, el corte… todo se siente premium.”</p>
+        <span>— Cliente NOIR</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="page hidden" id="turnos">
+    <div class="section-title">
+      <p class="tag">Reservas online</p>
+      <h2>Agendá tu turno</h2>
+    </div>
+
+    <div class="booking-layout">
+      <div class="booking-card">
+        <h3>Tu reserva</h3>
+
+        <input id="name" placeholder="Tu nombre" />
+        <input id="date" type="date" />
+        <input id="time" type="time" />
+
+        <select id="service">
+          <option>Fade Premium</option>
+          <option>Corte + Barba</option>
+          <option>Burst Fade</option>
+          <option>Mullet</option>
+          <option>Corte clásico</option>
+          <option>Diseño freestyle</option>
+        </select>
+
+        <button onclick="reserveWhatsApp()">Reservar por WhatsApp</button>
+      </div>
+
+      <div class="booking-info">
+        <h3>Horario</h3>
+        <p>Lunes a sábado · 10:00 a 20:00</p>
+
+        <h3>Ubicación</h3>
+        <p>Centro · Barbería premium</p>
+
+        <h3>Contacto</h3>
+        <p>Reservas rápidas por WhatsApp.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <h2>NOIR<span>BARBER</span></h2>
+  <p>Demo creada con Nexora Webs.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
